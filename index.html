@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Disease Detection</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🩺 AI HealthDetect</div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#detection">Detection</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+
+        <div class="hero-text">
+            <p class="tag">AI-POWERED HEALTH APPLICATION</p>
+
+            <h1>
+                Disease Detection
+                <span>System</span>
+            </h1>
+
+            <p>
+                Select your symptoms and get possible health conditions
+                based on a simple educational rule-based system.
+            </p>
+
+            <button onclick="startDetection()">
+                Start Detection →
+            </button>
+        </div>
+
+        <!-- Three.js Canvas -->
+        <div id="three-container"></div>
+
+    </section>
+
+
+    <!-- DETECTION -->
+    <section id="detection" class="detection-section">
+
+        <div class="section-title">
+            <p class="tag">SYMPTOM ANALYSIS</p>
+            <h2>Select Your Symptoms</h2>
+            <p>
+                Select the symptoms you are experiencing.
+            </p>
+        </div>
+
+
+        <div class="symptom-container">
+
+            <label class="symptom">
+                <input type="checkbox" value="fever">
+                <span>🌡️</span>
+                Fever
+            </label>
+
+            <label class="symptom">
+                <input type="checkbox" value="cough">
+                <span>😷</span>
+                Cough
+            </label>
+
+            <label class="symptom">
+                <input type="checkbox" value="headache">
+                <span>🤕</span>
+                Headache
+            </label>
+
+            <label class="symptom">
+                <input type="checkbox" value="sore_throat">
+                <span>🗣️</span>
+                Sore Throat
+            </label>
+
+            <label class="symptom">
+                <input type="checkbox" value="fatigue">
+                <span>😴</span>
+                Fatigue
+            </label>
+
+            <label class="symptom">
+                <input type="checkbox" value="nausea">
+                <span>🤢</span>
+                Nausea
+            </label>
+
+            <label class="symptom">
+                <input type="checkbox" value="vomiting">
+                <span>🤮</span>
+                Vomiting
+            </label>
+
+            <label class="symptom">
+                <input type="checkbox" value="body_pain">
+                <span>🦴</span>
+                Body Pain
+            </label>
+
+        </div>
+
+
+        <button class="detect-btn" onclick="detectDisease()">
+            🔍 Analyze Symptoms
+        </button>
+
+
+        <!-- RESULT -->
+        <div id="result" class="result-box">
+
+            <h2 id="result-title">Detection Result</h2>
+
+            <p id="result-text">
+                Select symptoms and click Analyze Symptoms.
+            </p>
+
+            <div id="result-details"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+
+        <div>
+            <p class="tag">ABOUT PROJECT</p>
+
+            <h2>AI Disease Detection</h2>
+
+            <p>
+                This application demonstrates how JavaScript can analyze
+                selected symptoms and provide possible health conditions.
+                Three.js is used to create an interactive 3D visual
+                interface.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>Technology Used</h3>
+
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Three.js</li>
+            </ul>
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            ⚠️ Educational purpose only. This application does not provide
+            a medical diagnosis.
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
